@@ -1,0 +1,43 @@
+#GameScreen{
+    position: relative;
+    width: 700px;
+    height: 450px;
+    border: black solid;
+    overflow: hidden;
+}
+
+#Player{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    bottom: 230px;
+    left: 30px;
+    background-color: hotpink;
+    border-radius: 50%;
+    transition: 100ms ease-in-out;
+}
+
+#Pillar{
+    position: absolute;
+    width: 40px;
+    height: 450px;
+    background-color: greenyellow;
+    right: 0%;
+}
+
+.PillarMove{
+    animation: PillarMove 5s infinite linear;
+}
+
+#PillarSafe{
+    position: absolute;
+    width: 40px;
+    height: 150px;
+    top: 280px;
+    background-color: rgb(255, 255, 255);
+}
+
+@keyframes PillarMove {
+    0%{right: -9%;}
+    100%{right: 100%;}
+}
