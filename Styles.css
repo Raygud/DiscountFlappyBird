@@ -1,27 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 #GameScreen{
     position: relative;
-    width: 700px;
-    height: 450px;
-    border: black solid;
+    width: 100%;
+    height: 600px;
     overflow: hidden;
 }
 
+#Points{
+    top: 1vw;
+    right: 1vw;
+    position: absolute;
+    background-color: aqua;
+}
+
+#Ground{
+    bottom: -90px;
+    position: absolute;
+    background-image: url(/ground.png);
+    width: 1500px;
+    height: 150px;
+    transition: 500ms ease-in-out;
+    animation: GroundMove 5s infinite linear;
+    left: 0px;
+}
+
 #Player{
+    background-image: url(/player.png);
+    background-size:auto;
     position: absolute;
     width: 55px;
     height: 55px;
     bottom: 230px;
     left: 30px;
-    background-color: hotpink;
-    border-radius: 50%;
-    transition: 100ms ease-in-out;
+    border-radius: 35%;
+    transition: 80ms ease-in-out;
 }
 
 #Pillar{
+    background-image: url(/green.png);
+    background-size: contain;
     position: absolute;
-    width: 40px;
-    height: 450px;
-    background-color: greenyellow;
+    width: 100px;
+    height: 1000px;
     right: 0%;
 }
 
@@ -30,14 +54,20 @@
 }
 
 #PillarSafe{
+    background-image: url(/SafeGreen.png);
     position: absolute;
-    width: 40px;
-    height: 150px;
-    top: 280px;
+    width: 100px;
+    height: 250px;
     background-color: rgb(255, 255, 255);
 }
 
 @keyframes PillarMove {
-    0%{right: -9%;}
-    100%{right: 100%;}
+    0%{right: -40%;}
+    100%{right: 110%;}
+}
+
+@keyframes GroundMove {
+    0%{left: 0px;}
+    99%{left: -820px;}
+    100%{left: 0px;}
 }
